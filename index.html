@@ -1,0 +1,278 @@
+
+<!DOCTYPE html>
+<html>
+<title>Abhishek Verma | Resume</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+a {text-decoration: none;}
+input,textarea {width: 100%;}
+</style>
+<script type="text/javascript">
+  function showSentAlert() {
+    var name = document.getElementById("name");
+    var email = document.getElementById("email");
+    var message = document.getElementById("message");
+    //var form = document.getElementById("contact_me_form").value;
+
+    var reqBody = new URLSearchParams("name="+name.value+"&email="+email.value+"&message="+message.value+"&submit=")
+
+    var response = fetch('sendmail.php', {method: "POST",
+      body: reqBody
+    }).then(response=> {
+      console.log(response);
+      console.log(response.status);
+      return response;
+    }).catch(err => {console.log(err)});
+    if (response.status="200") {
+      var sent_alert = document.getElementById("sent_alert");
+      sent_alert.style.display='block';
+      message.value="";
+      message.placeholder="Would you like to say something else?...";
+      setTimeout(()=> {sent_alert.style.display='none'}, 15000);
+    } else {
+      console.log("Failed to send mail...");
+    }
+  }
+</script>
+<body class="w3-light-grey">
+
+  <!-- Page Container -->
+  <div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+    <!-- The Grid -->
+    <div class="w3-row-padding">
+
+      <!-- Left Column -->
+      <div class="w3-third">
+
+        <div class="w3-white w3-text-grey w3-card-4">
+          <div class="w3-display-container">
+            <img src="images/myphoto.jpg" style="width:100%" alt="Avatar">
+            <div class="w3-display-bottomleft w3-container w3-text-sand">
+              <h2>Abhishek Verma</h2>
+            </div>
+          </div>
+          <div class="w3-container">
+            <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Software Engineer</p>
+            <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Hyderabad, India</p>
+            <p class="w3-hover-opacity"><a href="mailto:abhishekverma3210@gmail.com?subject=Contacting from web resume page by &body=Please mention your message here..."><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>abhishekverma3210@gmail.com</a></p>
+            <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>91 65 69 58 22 
+              <span class="w3-hover-opacity"><a href="tel:+919165695822"><i class="fa fa-volume-control-phone fa-fw w3-margin-left w3-large w3-text-teal"></i></a></span> 
+              <span class="w3-hover-opacity"><a href="sms:+919165695822"><i class="fa fa-commenting fa-fw w3-large w3-text-teal"></i></a></span>
+              <span class="w3-hover-opacity"><a href="https://wa.me/919165695822?text=I'm%20interested%20in%20your%20resume." target="_blank"><i class="fa fa-whatsapp fa-fw w3-large w3-text-teal"></i></a></span>
+            </p>
+            <p class="w3-hover-opacity"><a href="ABHISHEK_VERMAE_2019.docx"><i class="fa fa-download fa-fw w3-margin-right w3-large w3-text-teal"></i>My Resume</a></p>
+            <hr>
+
+            <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b></p>
+            <p><b>Programming/Scripting Languages</b></p>
+            <h6 class="w3-text-teal">
+              <span class="w3-tag w3-teal w3-round-large" style="margin-top: 2px;">Java</span>
+              <span class="w3-tag w3-teal w3-round-large" style="margin-top: 2px;">C/C++</span>
+              <span class="w3-tag w3-teal w3-round-large" style="margin-top: 2px;">Shell Script</span>
+              <span class="w3-tag w3-teal w3-round-large" style="margin-top: 2px;">Scala</span>
+              <span class="w3-tag w3-teal w3-round-large" style="margin-top: 2px;">Python</span>
+              <span class="w3-tag w3-teal w3-round-large" style="margin-top: 2px;">PHP</span>
+              <span class="w3-tag w3-teal w3-round-large" style="margin-top: 2px;">HTML</span>
+            </h6>
+            <p><b>Database</b></p>
+            <h6 class="w3-text-teal">
+              <span class="w3-tag w3-teal w3-round-large" style="margin-top: 2px;">MySQL</span>
+              <span class="w3-tag w3-teal w3-round-large" style="margin-top: 2px;">Oracle</span>
+            </h6>
+            <p><b>Frameworks</b></p>
+            <h6 class="w3-text-teal">
+              <span class="w3-tag w3-teal w3-round-large" style="margin-top: 2px;">Spring Boot</span>
+            </h6>
+            <!-- <p><b>Bigdata</b></p>
+            <h6 class="w3-text-teal">
+              <span class="w3-tag w3-teal w3-round-large" style="margin-top: 2px;">Apache Kafka</span>
+              <span class="w3-tag w3-teal w3-round-large" style="margin-top: 2px;">Apache Spark</span>
+              <span class="w3-tag w3-teal w3-round-large" style="margin-top: 2px;">HDFS</span>
+              <span class="w3-tag w3-teal w3-round-large" style="margin-top: 2px;">Map Reduce</span>
+            </h6> -->
+            <br>
+
+            <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Languages</b></p>
+            <h6 class="w3-text-teal">
+              <span class="w3-tag w3-teal w3-round" style="margin-top: 2px;">English</span>
+              <span class="w3-tag w3-teal w3-round" style="margin-top: 2px;">Hindi</span>
+            </h6>
+            <br>
+            <hr>
+
+            <p class="w3-large"><b><i class="fa fa-send fa-fw w3-margin-right w3-text-teal"></i>Contact Me</b></p>
+            <div class="w3-container">
+              <form action="" id="contact_me_form" onsubmit="showSentAlert(); return false;">
+
+                <div class="w3-row w3-section">
+                  <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-user"></i></div>
+                  <div class="w3-rest">
+                    <input class="w3-input w3-border" id="name" name="name" type="text" placeholder="Full Name" required>
+                  </div>
+                </div>
+
+                <div class="w3-row w3-section">
+                  <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-envelope-o"></i></div>
+                  <div class="w3-rest">
+                    <input class="w3-input w3-border" name="email" type="email" id="email" placeholder="Email" required>
+                  </div>
+                </div>
+
+                <textarea class="w3-input w3-border" id="message" name="message" placeholder="Write something.." style="height:175px" required></textarea>
+
+                <!-- Mail alert -->
+                <div class="w3-panel w3-green w3-display-container" style="display: none;" id="sent_alert" >
+                  <span onclick="this.parentElement.style.display='none'"
+                  class="w3-button w3-large w3-display-topright">&times;</span>
+                  <h5>Message Sent <i class="fa fa-send fa-fw w3-margin-right"></i></h5>
+                  <p>I've received your message. Will be in touch with you soon!</p>
+                </div>
+                
+                <button class="w3-button w3-block w3-section w3-teal w3-ripple w3-padding" name="submit" id="submit">Send</button>
+
+              </form>
+            </div>
+          </div>
+        </div><br>
+
+        <!-- End Left Column -->
+      </div>
+
+      <!-- Right Column -->
+      <div class="w3-twothird">
+
+        <!-- Work Experience Block Start -->
+        <div class="w3-container w3-card w3-white w3-margin-bottom">
+          <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience</h2>
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>Software Engineer / Next Sphere Technologies</b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Dec 2016 - <span class="w3-tag w3-teal w3-round">Current</span></h6>
+            <p>I started my career in Nextsphere as a fresher and worked on various technologies. Like Spring Boot as Microservices, Kafka, Ignite, ELK Stack, AWS Service and many more..</p>
+            <hr>
+          </div>
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>Hadoop Lab Co-ordinator / Kelly Technologies</b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Aug 2016 - Dec 2016</h6>
+            <p>Here I worked on distributed systems. Gained experience on Apache Hadoop and supporting tool.</p>
+            <hr>
+          </div>
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>Facilitator for C Language / Fuzinix Info Tech</b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>July 2014 - Jun 2015</h6>
+            <p>Here I worked as a facilitator for C Language.</p><br>
+          </div>
+        </div>
+        <!-- Work Experience Block END -->
+
+        <!-- Education Block Start -->
+        <div class="w3-container w3-card w3-white w3-margin-bottom">
+          <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-book fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>Gwalior Engineering College,
+            Gwalior</b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2012 - 2016</h6>
+            <p>Bachelor of Engineering in Information Technology</p>
+            <hr>
+          </div>
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>Green Wood Public School</b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2010 - 2012</h6>
+            <p>High School and Intermediate with PCM</p><br>
+          </div>
+        </div>
+        <!-- Education Block END-->
+
+        <!-- Projects Block Start -->
+        <div class="w3-container w3-card w3-white w3-margin-bottom">
+          <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-rocket fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Projects</h2>
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>Titan</b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>April 2017 - <span class="w3-tag w3-teal w3-round">Current</span> <i class="fa fa-tasks fa-fw w3-margin-right w3-margin-left"></i>Next Sphere Technologies</h6>
+            <p><b class="w3-opacity">Problem Statement:</b> To design a platform which big MLM Corporations can make use of to handle huge load.</p>
+            <p><b class="w3-opacity">Details:</b> Project is based on microservices and events based architecture. It has Kafka in its core to handle huge communication between the microservices.</p>
+            <p><b class="w3-opacity">Roles in project:</b>
+              <ul>
+                <li>Integrating Apache Kafka consumers and producers in the project.</li>
+                <li>Streaming topics to generate activity logs.</li>
+                <li>Designing deployment strategy and performance testing for Apache Kafka.</li>
+              </ul>
+            <hr>
+          </div>
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>Scheduling and Switching of Home Appliances Using BeagleBone Black and Android</b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>May 2016 <i class="fa fa-tasks fa-fw w3-margin-right w3-margin-left"></i>Major Project for B.E.</h6>
+            <p><b class="w3-opacity">Problem Statement:</b> To reduce power consumption by automatically switching on and off the home appliances as per user’s daily schedule.</p>
+            <p><b class="w3-opacity">Details:</b> <i>IOT(Internet of Things)</i> project for controlling home appliances via Wi-Fi using Android App and embedded system (BeagleBone Black with LAMP Server). User can control their home appliances with the help of Android App and can schedule their appliance accordingly. Over BeagleBone Black a LAMP server is running which gives commands to end appliances controlling unit as per the instructions given by the front end application unit.</p>
+            <p><b class="w3-opacity">Roles in project:</b>To develop android app, Creating LAMP Server, developing Shell Scripts, C and Python codes and implementing scheduling module.</p>
+          </div>
+        </div>
+        <!-- Project Block END-->
+
+        <!-- Personal Projects Block Start -->
+        <div class="w3-container w3-card w3-white w3-margin-bottom">
+          <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-flask fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Personal Projects</h2>
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>Movie Data Analysis</b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Sept 2016 - Oct 2016 <i class="fa fa-tasks fa-fw w3-margin-right w3-margin-left"></i>Kelly Technologies</h6>
+            <p><b class="w3-opacity">Description:</b> This Project is all about the movies released from 1995 to 2015. In this project we need to figure out:
+              <ol type="A">
+                <li>Most viewed movies ever.</li>
+                <li>Top 20 ever rated movies. (movie should be rated/viewed by at least 40 users)</li>
+                <li>Top 10 Critics. (Only consider the ratings of user who have given 40+ ratings to movies)</li>
+                <li>Most viewed movies released in last five year.</li>
+                <li>Top 10 active users. (To provide them free 10 latest movies tickets)</li>
+              </ol>
+            </p>
+            <p><b class="w3-opacity">Roles in project:</b>
+              <ul>
+                <li>Moved all data in flat files downloaded from various online movies ratings site to HDFS for further processing.</li>
+                <li>Written MapReduce code in java to process HDFS data.</li>
+                <li>Implemented filtering concept in MapReduce.</li>
+                <li>Developing Reducer-Side join in MapReduce.</li>
+                <li>Creating job chaining in MapReduce</li>
+                <li>Involved in gathering the requirements, designing, development and testing </li>
+                <li>Writing the script files for processing data and loading to HDFS</li>
+                <li>Writing CLI commands using HDFS.</li>
+                <li>Developed the UNIX shell scripts for creating the reports/log while processing data.</li>
+                <li>Completely involved in the requirement analysis phase.</li>
+                <li>Analyzing the requirement to setup a cluster</li>
+                <li>Created two different users (hduser for performing hdfs operations and map red user for performing map reduce operations only)</li>
+                <li>Ensured NFS is configured for Name Node</li>
+                <li>Setting Password less hadoop</li>
+                <li>Setting up cron job to delete hadoop logs/local old job files/cluster temp files</li>
+                <li>Commissioning of nodes to improve the processing speed.</li>
+              </ul>
+          </div>
+        </div>
+        <!-- Personal Project Block END-->
+
+        <!-- End Right Column -->
+      </div>
+
+      <!-- End Grid -->
+    </div>
+
+    <!-- End Page Container -->
+  </div>
+
+  <footer class="w3-container w3-teal w3-center w3-margin-top">
+    <br>
+    <a href="https://github.com/abhiverma23"><i class="fa fa-github w3-xlarge w3-hover-opacity"></i></a>&nbsp;
+    <a href="https://www.linkedin.com/in/abhishek-verma/"><i class="fa fa-linkedin w3-xlarge w3-hover-opacity"></i></a>&nbsp;
+    <a href="https://www.facebook.com/abhishekverma911"><i class="fa fa-facebook-official w3-xlarge w3-hover-opacity"></i></a>&nbsp;
+    <a href="https://www.instagram.com/abhishek_verma_23/"><i class="fa fa-instagram w3-xlarge w3-hover-opacity"></i></a>
+    <!-- <a href=""><i class="fa fa-snapchat w3-xlarge w3-hover-opacity"></i></a>
+    <a href=""><i class="fa fa-pinterest-p w3-xlarge w3-hover-opacity"></i></a>
+    <a href=""><i class="fa fa-twitter w3-xlarge w3-hover-opacity"></i></a> -->
+    <p>Find me on social media.</p>
+    <!-- <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p> -->
+  </footer>
+
+</body>
+</html>

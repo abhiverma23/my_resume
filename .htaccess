@@ -1,0 +1,19 @@
+DirectoryIndex commingsoon.html commingsoon.htm
+#DirectoryIndex index.php index.html index.htm index2.html
+
+Options -Indexes
+
+ErrorDocument 400 http://vabhishek.com/error?err=400
+ErrorDocument 401 http://vabhishek.com/error?err=401
+ErrorDocument 403 http://vabhishek.com/error?err=403
+ErrorDocument 404 http://vabhishek.com/error
+ErrorDocument 500 http://vabhishek.com/error?err=500
+ErrorDocument 503 http://vabhishek.com/error?err=503
+
+<Files index.html>
+FileETag None
+Header unset ETag
+Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+Header set Pragma "no-cache"
+Header set Expires "Wed, 11 Jan 1984 05:00:00 GMT"
+</Files>
